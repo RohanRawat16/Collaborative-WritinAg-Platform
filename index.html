@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Collaborative Writing Platform</title>
+</head>
+<body style="background-image: url(/images/cwp-white-background.jpg);">
+    <header style="display: flex; justify-content: center; align-items: center;">
+        <h1 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 45px;">Collaborative Writing Platform</h1>
+    </header>
+    <main style="display: flex; justify-content: center; align-items: center; margin-top: 20px; flex-direction: column; gap: 5em;">
+        <textarea id="editor" placeholder="Start writing..." rows="20" cols="100" style="background-color: black; color: white; font-size: larger; border-width: 5px; border-color: steelblue;;"></textarea>
+        <div id="livePreview"></div>
+    </main>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
