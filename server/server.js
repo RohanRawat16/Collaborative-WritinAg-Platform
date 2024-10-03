@@ -7,7 +7,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server);
 
-// Serve static files from the root directory
+// Serve static files (css, js, and index.html)
 app.use(express.static(path.join(__dirname, '..')));
 
 // Serve the index.html for the root URL
