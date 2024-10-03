@@ -7,10 +7,12 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server);
 
-// Serve static files from the root directory
-app.use(express.static(path.join(__dirname, '..')));
+// Serve static files from the root, 'css', and 'js' directories
+app.use(express.static(path.join(__dirname, '..'))); // Root directory
+app.use(express.static(path.join(__dirname, '../css'))); // CSS folder
+app.use(express.static(path.join(__dirname, '../js'))); // JS folder
 
-// Serve index.html on the root path
+// Serve the index.html for the root URL
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../index.html'));
 });
